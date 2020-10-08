@@ -144,7 +144,7 @@ nav>ul, nav>li {
     font-family: 'futura-bold';
 }
 
-nav.nav--home>ul {
+nav.nav--home>ul{
     display: flex;
     align-items: center;
     position: sticky;
