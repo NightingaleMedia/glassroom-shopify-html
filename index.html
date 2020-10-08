@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassroom</title>
+    <link rel="stylesheet" href="assets/style.css">
+    </link>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <!-- wrap-->
+        <section class="section__landing">
+            <div class="section__landing--logo">
+                <img class="header-logo" src="assets/img/Logos/Glassroom_Logo_Color--md.png" alt="">
+                <h1> Welcome To Glassroom!</h1>
+                <p>experience glass. make art. have fun.</p>
+
+            </div>
+            <div class="landing__div landing--left">
+                <div class="landing-inner landing__div--left-inner">
+                    <img src="https://via.placeholder.com/400" alt="">
+                    <button> Glass Kits</button>
+                </div>
+
+            </div>
+
+            <div class="landing__div landing--right">
+                <div class="landing-inner landing__div--left-inner">
+                    <img src="https://via.placeholder.com/400" alt="">
+                    <button> Glass Classes</button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="section__nav-wrap">
+            <nav class="nav--home">
+                <ul>
+
+                    <img class="nav-logo" src="assets/img/Logos/Glassroom_Logo_Color--sm.png" alt="">
+
+                    <li class="menu-item">
+                        Glass Kits
+                    </li>
+                    <li class="menu-item">
+                        Glass Classes
+                    </li>
+                    <li class="menu-item">
+                        Gift Certificates
+                    </li>
+                    <li class="cart">
+                        Cart (0)
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section>
+
+        </section>
+
+        <section class="section__how-it-works">
+            <h2 class="how-it-works--heading">How It Works</h2>
+            <div class="how-it-works__div">
+
+                <div class="how-it-works--circle">
+                    <svg class="progress-ring" height="150" width="150">
+                        <circle class="progress-ring__circle" stroke-width="6" stroke="white" fill="#64c9e3" r="72"
+                            cx="75" cy="75" />
+                    </svg>
+                    <h4>1. Order a Kit</h4>
+                    <p class="how-it-works-p">We can ship anywhere in the country.
+                        Your kit will ship 3-5 days from ordering.</p>
+                </div>
+
+                <div class="how-it-works--circle">
+                    <svg class="progress-ring" height="150" width="150">
+                        <circle class="progress-ring__circle" stroke-width="6" stroke="white" fill="#64c9e3" r="72"
+                            cx="75" cy="75" />
+                    </svg>
+                    <h4>2. Create!</h4>
+                    <p class="how-it-works-p">When your kit arrives, read the instructions
+                        and have fun! Express your self!</p>
+                </div>
+
+                <div class="how-it-works--circle">
+                    <svg class="progress-ring" height="150" width="150">
+                        <circle class="progress-ring__circle" stroke-width="6" stroke="white" fill="#64c9e3" r="72"
+                            cx="75" cy="75" />
+                    </svg>
+                    <h4>3. Ship It Back </h4>
+                    <p class="how-it-works-p">Once your masterpiece is complete, pack
+                        it up and send it back to us to be fired.</p>
+                </div>
+
+                <div class="how-it-works--circle">
+                    <svg class="progress-ring" height="150" width="150">
+                        <circle class="progress-ring__circle" stroke-width="6" stroke="white" fill="#64c9e3" r="72"
+                            cx="75" cy="75" />
+                    </svg>
+                    <h4>4. Wait...and Enjoy!</h4>
+                    <p class="how-it-works-p">We will fire your projects in our kilns and
+                        ship your finished pieces back to you.</p>
+                </div>
+
+                <div class="progress-line">
+                    <div class="progress-line--inner">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="how-it-works--footing">
+                <button>Pick Your Kit </button>
+            </div>
+        </section>
+
+        <section>
+
+        </section>
+
+        <footer>
+            <div class="footer--top">
+                <div>
+                    <h4>Gift Certificates</h4>
+                    <h4>About Us</h4>
+                    <h4>Contact Us</h4>
+                    <h4>FAQs</h4>
+                </div>
+                <div>
+                    <h4>How To Project Videos</h4>
+                    <h4>Subscription Kits</h4>
+                    <h4>Fundraiser Kits</h4>
+                    <h4>Single Projects</h4>
+                </div>
+                <div>
+                    <h4>Made Just For You At:</h4>
+                </div>
+            </div>
+            <div class="footer--bottom">
+                <div>
+                    <div class="social-icon">
+
+                    </div>
+                    <div class="social-icon">
+
+                    </div>
+                    <div class="social-icon">
+
+                    </div>
+                </div>
+                <div class="terms-section">
+                    <p> Terms & Conditions | Privacy Policy</p>
+                </div>
+            </div>
+
+        </footer>
+
+    </div> <!-- wrap-->
+</body>
+<script>
+
+
+
+    const landingBox = document.querySelector('.section__landing');
+
+    const landingBoxes = document.querySelectorAll('.landing__div');
+
+    const nav = document.querySelector('.nav--home');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 970) {
+            nav.classList.add('fixed-nav')
+        } else {
+            nav.classList.remove('fixed-nav')
+        }
+    })
+
+    const winWidth = window.innerWidth
+    const box1 = landingBoxes[0]
+    const box2 = landingBoxes[1]
+
+    function handleBoxSizes(value, a, b) {
+        a.style.width = `${Math.floor(50 + Math.abs(value))}%`
+        b.style.width = `${50 - Math.floor(Math.abs(value))}%`
+    }
+    function handleMouseMove(e) {
+        let value = (Math.floor(((e.clientX + 1) / winWidth) * 100) - 50) / 10;
+        if (value < 0) {
+            handleBoxSizes(value, box1, box2)
+        } else {
+            handleBoxSizes(value, box2, box1)
+        }
+    }
+    landingBox.onmouseenter = function () {
+        if (window.innerWidth > 800) {
+            landingBox.addEventListener('mousemove', handleMouseMove)
+        }
+    }
+
+    landingBox.onmouseleave = function () {
+        landingBox.removeEventListener('mousemove', handleMouseMove)
+        box1.style.width = "50%"
+        box2.style.width = "50%"
+    }
+
+    //circles
+    const circles = document.querySelectorAll('.progress-ring__circle');
+    const progressLine = document.querySelector('.progress-line--inner')
+    let i = 0;
+
+    const handleCircles = (e) => {
+
+        let x = window.pageYOffset;
+        console.log(x)
+        switch (true) {
+            case (x < 2319):
+                console.log('less than')
+                break;
+
+            case (x > 2320 && x < 2800):
+                let i = 0;
+                let animate = setInterval(function () {
+                    if (i >= 3) {
+                        clearInterval(animate)
+                    }
+                    animateCircle(circles[i])
+                    i++
+                }, 300)
+
+                window.removeEventListener('scroll', handleCircles)
+                // animateCircle(circles[0])
+                break;
+
+                // case (x > 2801 && x < 3300):
+                //     animateCircle(circles[1])
+                //     break;
+
+                // case (x > 3301 && x < 3800):
+                //     animateCircle(circles[2])
+                //     break;
+
+                // case (x > 3801 && x < 4200):
+                //     animateCircle(circles[3])
+                //     break;
+                // case (x > 4201):
+                // document.querySelector('.section__how-it-works').classList.add('done-scroll')
+                // document.querySelector('.how-it-works__div').classList.add('done-scroll')
+                // window.scrollTo(0, 3260);
+                // window.removeEventListener('scroll', handleCircles)
+                break;
+
+
+        }
+
+    }
+    window.addEventListener('scroll', handleCircles)
+    circles.forEach(circle => {
+        const radius = circle.r.baseVal.value;
+        const circumference = radius * 2 * Math.PI;
+        circle.style.strokeDasharray = `${circumference} ${circumference}`
+        circle.style.strokeDashoffset = `${circumference}`
+    })
+    function animateCircle(circle) {
+        circle.style.strokeDashoffset = 0;
+        let corres = [...circles].findIndex(end => circle === end)
+        let percentWidth = `${(corres / 3) * 100}%`
+        console.log(percentWidth)
+        progressLine.style.width = percentWidth
+
+    }
+
+    function animateEach() {
+
+
+
+    }
+
+
+</script>
+
+</html>
